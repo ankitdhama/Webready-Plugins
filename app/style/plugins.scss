@@ -1,0 +1,118 @@
+$input_border_color: #ddd;
+$selected_bg: #337ab7;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+      -ms-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+/*CHANGE CHECKBOX AND RADIO BOX STYLING*/
+
+
+/*LOADER ON COMPONENTS*/
+
+
+/*DROPDOWN STYLING*/
+
+
+/*AUTOCOMPLETE STYLING*/
+
+
+/*MULTISELECT DROPDOWN STYLING*/
+.plugin_multiselect{
+    border: 1px solid $input_border_color;
+    position: relative;
+    background: #fff;
+
+    @include border-radius(4px);
+
+    .input_field{
+        border: 0;
+        border-bottom: 1px solid $input_border_color;        
+        padding: 9px 10px;
+        width: 100%;      
+        background: rgba(0,0,0,0);
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    .selected_items{
+        padding: 4px;
+        font-size: 12px;
+        margin-bottom: -4px;
+
+        .selected_tag{
+            border: 1px solid $selected_bg;
+            color: $selected_bg;
+            display: inline-block;
+            margin-right: 4px;
+            padding: 3px 5px;
+            @include border-radius(3px);
+            margin-bottom: 4px;
+
+            .remove_tag{
+                border-left: 1px solid;
+                cursor: pointer;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 600;
+                margin-left: 7px;
+                padding-left: 5px;
+            }
+        }
+    }
+
+    .item_list_panel{        
+        position: absolute;
+        min-width: 200px;
+        width: 100%;
+        left: 0;
+        top: 32px;
+        padding: 0;
+        list-style: none;
+        background: #fff;
+        border-radius: 0 0 3px 3px;
+        @include box-shadow(0 1px 1px 0 #ccc);
+        display: none;
+        max-height: 229px;
+        overflow: auto;
+
+        li{
+            border-bottom: 1px solid #eee;
+            font-size: 12px;
+            padding: 9px 10px;
+
+            .text{
+                font-size: 13px;                
+            }
+
+            &:hover{
+                background: #f2f2f2;
+            }
+            &.selected{
+                color: $selected_bg;
+            }
+            &.selected:after{
+                content: 'selected';
+                font-size: 11px;
+                float: right;
+            }
+        }
+
+        &.visible{
+            display: block;
+        }
+    }
+}
+

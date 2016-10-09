@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cool plugins</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="style/plugins.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container_fluid">
+        <div class="header_navbar">
+            <div class="container">
+                <a href="#" class="logo_text">Webready Plugins</a>
+            </div>
+        </div><!--/.header_navbar-->
+        
+        <div style="height: 50px;"></div>
+
+        <div class="container">
+            <div class="col col_25">
+                <div class="left_side_menu">
+                    <ul>
+                        <li><a href="#" class="active">Multiselection Dropdown</a></li>
+                        <li><a href="">Loading panel</a></li>
+                        <li><a href="">Droplist</a></li>
+                        <li><a href="">Modal</a></li>
+                        <li><a href="">Alerts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col col_75">
+                <div class="pd_15">
+                    <h1 class="main_heading">Multiselection Dropdown</h1>
+                    <p>
+                        Making multiselection dropdown with search functionality was never so easy before webready pluging library.
+                        Usign webready library you can easily implement multiselection dropdown on your website with minimal code 
+                        written and without depending on other libraries(eg: JQuery, angularjs, vuejs etc).
+                    </p>
+                    <div class="demo_heading">Demo:</div>
+                    <div class="demo_panel">
+                        <div id="multi_select_id" style="width: 300px"></div>
+                    </div>
+                    <div class="demo_heading">Steps to use in your website</div>
+                    <ul class="steps_list">
+                        <li>1. Download webready plugins files - plugins.js and plugins.css from <a href="#">here</a></li>
+                        <li>2. Attach file path to your web page.</li>
+                        <li>3. Use below code to call plugin.</li>
+                    </ul>
+                </div>
+            </div>
+               
+        </div><!--/container-->        
+    </div><!--/.container_fluid-->
+
+    <!--script loads here-->
+    <script src="scripts/plugins.js"></script>
+    <script>        
+        var drop = new plugins.MultiSelectionDropDown({
+            "tag_bg": "blue",
+            "items": ["ankit","asdljskjd","hello","abckskd", "hello","new item 3","new item 4","new item 5","new item 6"],
+            "el": "multi_select_id"
+        });
+    </script>
+</body>
+</html>

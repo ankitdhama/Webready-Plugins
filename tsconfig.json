@@ -1,0 +1,16 @@
+{
+    "files": [
+        "app/scripts/plugins.ts"
+    ],
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "allowJs": true,
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "strictNullChecks": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
